@@ -4,17 +4,18 @@ supervisor-board
 web dashboard for multiple supervisord instances
 
 
-Installaction
-=============
+Installation
+-----
 copy and edit config
-  cp config.cson.sample config.cson 
-  vim config.cson
-  npm install
-  
+```
+cp config.cson.sample config.cson
+vim config.cson
+npm install
+```  
   
 Run
-===
-  coffee index.coffee
+---
+```coffee index.coffee```
   
-  point your browser to localhost:5000
+point your browser to localhost:5000
 
