@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<script src="http://coffeescript.org/extras/coffee-script.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="bower_components/jquery-timeago/jquery.timeago.js"></script>
+
+<script type="text/javascript" src="bower_components/pines-notify/jquery.pnotify.min.js"></script>
+
+<link href="bower_components/pines-notify/jquery.pnotify.default.css" media="all" rel="stylesheet" type="text/css" />
+<link href="bower_components/pines-notify/jquery.pnotify.default.icons.css" media="all" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" href="bower_components/bootstrap/docs/assets/css/bootstrap.css">
+
+<link href="bower_components/font-awesome/css/font-awesome.min.css" media="all" rel="stylesheet" type="text/css" />
+
+
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<script src="/socket.io/socket.io.js"></script>
+
+<style>
+body {
+	font-family: "FontAwesome";
+
+}
+.group {
+	background: #f9f9f9;
+	margin: 4px;
+	padding: 2px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+
+}
+.host {
+	font-size: 12px;
+}
+.program .title {
+	padding-left: 3px;
+}
+.program .buttons {
+	padding-left: 5px;
+	opacity: 0.1;
+    transition: opacity 0.05s ease-in-out;
+}
+.program:hover .buttons {
+	opacity: 1;
+
+}
+.instance:hover {
+	background: #f0f0f0;
+}
+.instance div {
+	padding-left: 4px;
+	padding-top: 2px;
+
+}
+.uptime {
+	text-align: right;
+	font-size: 12px;
+}
+h5 {
+	margin: 0px;
+}
+.instances {
+	width: 400px;
+}
+</style>
+<script src="index.coffee" type="text/coffeescript"></script>
+
+<body class="preview">
+
+<div class="container">
+	<div class="row-fluid" id="processes">
+
+	</div>
+</div>
+</body>

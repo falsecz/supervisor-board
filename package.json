@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "cd public; bower install; cd .."
   },
   "repository": "",
   "author": "",
@@ -14,6 +14,7 @@
     "socket.io": "~0.9.16",
     "xmlrpc": "~1.1.0",
     "async": "~0.2.9",
-    "cson-config": "~0.1.5"
+    "cson-config": "~0.1.5",
+    "bower": "~0.10.0"
   }
 }

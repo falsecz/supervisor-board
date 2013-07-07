@@ -2,3 +2,4 @@ hosts: [
 	'host1:9001'
 	'host2:9001'
 ]
+port: process.env.PORT or 5000

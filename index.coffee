@@ -5,7 +5,7 @@ xmlrpc = require 'xmlrpc'
 util = require 'util'
 express = require 'express'
 {EventEmitter} = require 'events'
-dateFormat = require 'dateformat'
+
 
 
 spclients = {}
@@ -189,6 +189,7 @@ app.get '/process/stop/:host/:name', (req, res, next) ->
 
 
 
-server.listen 5000
+server.listen process.config.port
+console.log "Listening on #{process.config.port}"
 
 
