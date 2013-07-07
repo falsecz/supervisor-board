@@ -1,0 +1,19 @@
+{
+  "name": "supervisor-board",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "",
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "express": "~3.3.3",
+    "socket.io": "~0.9.16",
+    "xmlrpc": "~1.1.0",
+    "async": "~0.2.9",
+    "cson-config": "~0.1.5"
+  }
+}
