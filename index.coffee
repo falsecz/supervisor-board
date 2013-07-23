@@ -150,13 +150,6 @@ io.sockets.on 'connection', (socket) ->
 			t.close()
 
 
-		t = new Tail "app3.us-w2.aws.ccl", data.name
-		t.on 'data', (data) ->
-			socket.emit 'tail', data
-		socket.on 'end', () ->
-			t.close()
-
-
 
 app.use (req, res, next) ->
 	if req.url.match '/tail/'
