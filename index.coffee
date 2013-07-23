@@ -98,7 +98,10 @@ timer = null
 updating = no
 
 updateProcesses = () ->
+	return if updating
+
 	updating = yes
+
 	findAllProcesses (err, processes) ->
 		updating = no
 		clients = io.sockets.clients()
