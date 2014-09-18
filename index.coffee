@@ -26,7 +26,7 @@ class Tail extends EventEmitter
 		@_update()
 
 	close: () ->
-		clearInterval @_timer
+		clearupdateProcessesval @_timer
 		@_closed = yes
 	_update: =>
 		return if @_closed
@@ -62,6 +62,7 @@ findAllProcesses = (done) ->
 	processes = []
 	async.each hosts, (host, next) ->
 		spclient = spclients[host]
+		console.log host
 		spclient.methodCall 'supervisor.getAllProcessInfo', [], (err, localProcesses) ->
 			return next err if err
 			for process in localProcesses
@@ -73,6 +74,7 @@ findAllProcesses = (done) ->
 				process.uptime = "" unless process.statename is 'RUNNING'
 
 				processes.push process
+			# console.log host
 			next()
 	,(err) ->
 		return done err if err
@@ -81,7 +83,7 @@ findAllProcesses = (done) ->
 		for process in processes
 			groups[process.name] ?= []
 			groups[process.name].push process
-
+		console.log 'xxx'
 		done null, groups
 
 app = express()
@@ -101,7 +103,6 @@ updateProcesses = () ->
 	return if updating
 
 	updating = yes
-
 	findAllProcesses (err, processes) ->
 		updating = no
 		clients = io.sockets.clients()
